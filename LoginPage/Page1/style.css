@@ -98,6 +98,7 @@ h1 {
     padding: 2px;
     background-color: rgba(255, 255, 255, 0.123);
     position: relative;
+    width: 100%;
 }
 
 .input-fields label {
@@ -119,6 +120,7 @@ h1 {
     padding: 4px 6px;
     background: none;
     color: white;
+    width: 100%;
 }
 
 .box:has(:focus) {
@@ -140,7 +142,6 @@ input::placeholder{
 
 .visibility {
     color: rgba(0, 0, 0, 0.664);
-    position: absolute;
     right: 10px;
     z-index: 1;
     cursor: pointer;
