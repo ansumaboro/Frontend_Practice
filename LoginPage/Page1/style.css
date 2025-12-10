@@ -10,7 +10,7 @@
 body{
     width: 100vw;
     height: 100vh;
-    background-image: url(bg-image.jpg);
+    background-image: url(bg-image.webp);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
