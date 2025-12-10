@@ -177,11 +177,12 @@ input::placeholder{
 
 .login-btn:focus {
     outline: none;
-    background-color: hsl(221, 100%, 37%)
+    background-color: hsl(221, 100%, 37%);
 }
 
 .login-btn:hover{
-    background-color: hsl(221, 100%, 37%)
+    background-color: hsl(221, 100%, 37%);
+    scale: 1.03;
 }
 
 .divider {
