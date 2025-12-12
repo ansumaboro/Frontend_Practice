@@ -32,6 +32,11 @@ h1{
     height: 300px;
     position: absolute;
     visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 #gallery .item1 {
