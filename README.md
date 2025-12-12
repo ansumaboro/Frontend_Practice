@@ -1,1 +1,1 @@
-Got to "LoginPages/Page1"
+Got to <a href="LoginPages/Page1"> Page 1 </a>
