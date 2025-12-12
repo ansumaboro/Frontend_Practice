@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(bg-image.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.329);
+    filter: brightness(10%);
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.089);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(1px);
+    width: 350px;
+    max-width: 100%;
+    height: fit-content;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.322);
+}
+
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+}
+
+.login-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+}
+
+h1 {
+    font-size: 28px;
+    text-align: center;
+    margin: 20px;
+    color: white;
+    font-weight: 400;
+}
+
+.input-fields {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 32px;
+}
+
+.box {
+    border: 1px solid rgba(158, 158, 158, 0.315);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    background-color: rgba(255, 255, 255, 0.123);
+    position: relative;
+    width: 100%;
+}
+
+.input-fields label {
+    /* border-right: 1px solid gray; */
+    display: flex;
+    align-items: center;
+}
+
+.input-fields label span {
+    width: 24px;
+    /* filter: contrast(0.8); */
+    color: rgba(0, 0, 0, 0.63);
+    padding: 0 4px;
+    box-sizing: content-box;
+}
+
+.input-fields input {
+    border: none;
+    padding: 4px 6px;
+    background: none;
+    color: white;
+    width: 100%;
+}
+
+.box:has(:focus) {
+    background-color: rgba(255, 255, 255, 0.411);
+}
+
+.box:has(:focus) > input, .box:has(:focus) > label {
+    color: black;
+    border-right-color: black;
+}
+
+input::placeholder{
+    color: rgba(255, 255, 255, 0.445);
+}
+
+.input-fields input:focus{
+    outline: none;
+}
+
+.visibility {
+    color: rgba(0, 0, 0, 0.664);
+    right: 10px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.visibility:hover {
+    color: rgba(0, 0, 0, 0.904);
+    /* background-color: white; */
+}
+
+.forgot-pass {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    translate: 0 110%;
+    color: rgba(255, 255, 255, 0.603);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: hsl(221, 100%, 51%);
+    padding: 6px 24px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px 1px rgba(255, 255, 255, 0.123);
+    transition: 0.2s;
+}
+
+.login-btn:focus {
+    outline: none;
+    background-color: hsl(221, 100%, 37%);
+}
+
+.login-btn:hover{
+    background-color: hsl(221, 100%, 37%);
+    scale: 1.03;
+}
+
+.divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+hr {
+    width: 30%;
+    height: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.404);
+}
+
+.divider p {
+    color: rgba(255, 255, 255, 0.637);
+    font-size: 12px;
+    text-wrap: nowrap;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 16px 20px;
+}
+
+.icons img {
+    width: 20px;
+    background-color: rgba(255, 255, 255, 0.438);
+    padding: 4px;
+    box-sizing: content-box;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.icons img:hover {
+    background-color: rgba(255, 255, 255, 0.938);
+}

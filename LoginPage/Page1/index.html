@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-container">
+            <h1>Sign Up</h1>
+            <div class="input-fields">
+                <div class="box">
+                    <label for="email">
+                        <span class="material-symbols-outlined">
+                            mail
+                        </span>
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"/></svg> -->
+                    </label>
+                    <input type="email" id="email" placeholder="Email">
+                </div>
+                <div class="box">
+                    <label for="password">
+                        <span class="material-symbols-outlined">
+                            lock
+                        </span>
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M256 160L256 224L384 224L384 160C384 124.7 355.3 96 320 96C284.7 96 256 124.7 256 160zM192 224L192 160C192 89.3 249.3 32 320 32C390.7 32 448 89.3 448 160L448 224C483.3 224 512 252.7 512 288L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 288C128 252.7 156.7 224 192 224z"/></svg> -->
+                    </label>
+                    <input type="password" id="password" placeholder="Password">
+                    <span class="material-symbols-outlined visibility" id="visibility">
+                        visibility_off
+                    </span>
+                    <p class="forgot-pass">Forgot password?</p>
+                </div>
+            </div>
+            <button class="login-btn">Login</button>
+            <div class="divider">
+                <hr>
+                <p>Or sign in with</p>
+                <hr>
+            </div>
+            <div class="icons">
+                <img src="google-icon.svg" alt="Google Icon">
+                <img src="github-icon.svg" alt="Github Icon">
+                <img src="facebook-icon.svg" alt="Facebook Icon">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("visibility").addEventListener("click", (e)=>{
+            let visibilityBtn = e.target;
+            if(visibilityBtn.innerText === "visibility_off"){
+                visibilityBtn.innerText = "visibility";
+                visibilityBtn.previousElementSibling.type = "text";
+            }else{
+                visibilityBtn.innerText = "visibility_off";
+                visibilityBtn.previousElementSibling.type = "password";
+            }
+        })
+    </script>
+</body>
+</html>
