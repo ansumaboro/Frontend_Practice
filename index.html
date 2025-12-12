@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend_Practice</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family:sans-serif;
+        }
+        :root {
+            --primary-color: hsl(50, 100%, 50%);
+            --secondary-color: hsl(50, 100%, 65%);
+            --tertiary-color: hsl(50, 100%, 80%);
+            --bg-color: hsl(50, 100%, 95%);
+        }
+        body {
+            background-color: var(--bg-color);
+        }
+        .container {
+            width: 80vw;
+            margin-inline: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .login-pages, .layout-pages {
+            min-width: 350px;
+            flex: 1 1;
+        }
+        h1 {
+            text-align: center;
+            text-decoration: dashed;
+            text-decoration-line: underline;
+            text-underline-offset: 10px;
+            color: var(--primary-color);
+        }
+        h2, hr {
+            margin: 20px 0;
+            margin-top: 40px;
+            font-weight: 500;
+        }
+        li {
+            width: fit-content;
+            list-style: "❤   ";
+            font-weight:00;
+            margin: 8px 0;
+        }
+        li::marker{
+            position: absolute;
+            transition: all 0.3s;
+        }
+        li:has(a:hover)::marker {
+            font-size: 18px;
+            color: red;
+        }
+        li a {
+            color: black;
+            display: block;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 5px 20px 20px 5px;
+            padding: 6px 10px;
+            background-color: var(--tertiary-color);
+            width: 200px;
+            transition: all 0.3s;
+        }
+        li a:hover {
+            margin-left: 10px;
+            background-color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <h1>Frontend Practice</h1>
+    <div class="container">
+        <!-- <hr> -->
+        <div class="login-pages">
+            <h2>Login Pages</h2>
+            <ul>
+                <li><a href="LoginPage/Page1/">Page 1</a></li>
+            </ul>
+        </div>
+        <!-- <hr> -->
+        <div class="layout-pages">
+            <h2>Pinterest Style Layout</h2>
+            <ul>
+                <li><a href="PinterestStyleLayout/">Go to the layout page</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
