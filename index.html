@@ -13,10 +13,11 @@
             --primary-color: hsl(50, 100%, 50%);
             --secondary-color: hsl(50, 100%, 65%);
             --tertiary-color: hsl(50, 100%, 80%);
-            --bg-color: hsl(50, 100%, 95%);
+            --bg-primary: hsl(50, 100%, 95%);
+            --bg-secondary: hsl(50, 100%, 90%);
         }
         body {
-            background-color: var(--bg-color);
+            background-color: var(--bg-primary);
         }
         .container {
             width: 80vw;
@@ -24,10 +25,27 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            gap: 20px;
         }
         .login-pages, .layout-pages {
             min-width: 350px;
             flex: 1 1;
+            background-color: var(--bg-secondary);
+            padding: 10px;
+            border-radius: 10px;
+            position: relative;
+            &:before{
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                z-index: -1;
+                margin: -2px;
+                border-radius: 12px;
+                background: linear-gradient(to right, var(--primary-color), var(--tertiary-color));
+            }
         }
         h1 {
             text-align: center;
@@ -37,8 +55,7 @@
             color: var(--primary-color);
         }
         h2, hr {
-            margin: 20px 0;
-            margin-top: 40px;
+            margin: 10px 0;
             font-weight: 500;
         }
         li {
@@ -80,6 +97,7 @@
             <h2>Login Pages</h2>
             <ul>
                 <li><a href="LoginPage/Page1/">Page 1</a></li>
+                <li><a href="LoginPage/Page2/">Page 2</a></li>
             </ul>
         </div>
         <!-- <hr> -->
